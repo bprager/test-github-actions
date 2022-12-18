@@ -10,6 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
@@ -31,3 +32,6 @@ jobs:
         VERSION: 0.0.1-SNAPSHOT
       with:
           push: false
+          context: .
+          build-args: |
+            "VERSION=0.0.2-SNAPSHOT"

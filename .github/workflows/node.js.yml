@@ -27,5 +27,7 @@ jobs:
     - run: npm run build --if-present
     - name: Build and push
       uses: docker/build-push-action@v3
+      env: 
+        VERSION: 0.0.1-SNAPSHOT
       with:
           push: false
